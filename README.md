@@ -147,6 +147,8 @@ PORT=4000
 node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
+Si `JWT_SECRET` falta o tiene menos de 32 caracteres, el backend no arranca y lo indica en consola.
+
 ```bash
 npm run dev
 ```

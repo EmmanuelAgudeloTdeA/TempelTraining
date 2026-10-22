@@ -76,7 +76,7 @@ async function login(req, res) {
 
     const token = jwt.sign(
       { id: user.id, rol: user.rol, nombre: user.nombre, email: user.email, mustChangePassword },
-      process.env.JWT_SECRET || 'tempel-secret',
+      process.env.JWT_SECRET,
       { expiresIn: '8h' }
     );
 
