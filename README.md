@@ -137,8 +137,14 @@ DB_PASSWORD=tu_contraseña
 DB_PORT=1433
 DB_ENCRYPT=false
 DB_TRUST_SERVER_CERTIFICATE=true
-JWT_SECRET=un_secreto_largo
+JWT_SECRET=pega_aqui_el_secreto_generado
 PORT=4000
+```
+
+`JWT_SECRET` es la clave con la que el backend firma los tokens de sesión. Cada `.env` necesita una propia, aleatoria y larga; nunca se sube al repositorio. Para generarla (funciona en macOS, Linux y Windows):
+
+```bash
+node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 ```
 
 ```bash
