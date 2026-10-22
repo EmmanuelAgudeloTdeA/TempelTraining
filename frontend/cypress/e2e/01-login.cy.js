@@ -5,7 +5,7 @@ describe('CP-01 Login - Tempel Training', () => {
   });
 
   it('CP-01.1 Valida título, URL, elementos presentes y estilos de la pantalla de login', () => {
-    cy.title().should('eq', 'tempel-frontend');
+    cy.title().should('eq', 'Tempel Training');
     cy.url().should('eq', `${Cypress.config('baseUrl')}/login`);
     cy.get('img[alt="Tempel Training"]').should('be.visible').and('have.attr', 'src');
     cy.get('h1').should('have.text', 'Tempel Training');
