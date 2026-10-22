@@ -1,4 +1,3 @@
-// Inicia sesión desde el formulario de login (lo usan las pruebas que validan la UI).
 Cypress.Commands.add('loginUI', (email, password) => {
   cy.visit('/login');
   cy.get('input[type="email"]').clear().type(email);
@@ -16,7 +15,6 @@ Cypress.Commands.add('adminCredentials', () => {
   });
 });
 
-// Inicia sesión como administrador.
 Cypress.Commands.add('loginAdmin', () => {
   cy.adminCredentials().then(({ ADMIN_EMAIL, ADMIN_PASSWORD }) => {
     cy.loginUI(ADMIN_EMAIL, ADMIN_PASSWORD);
